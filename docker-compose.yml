@@ -1,0 +1,13 @@
+version: '3'
+services:
+  app:
+    container_name: rust-container
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    tty: true
+    volumes:
+      - ./:/src
+    ports:
+      - 8999:80
+
